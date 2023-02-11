@@ -13,46 +13,68 @@ class _AdventureScreenState extends State<AdventureScreen> {
   Map<String, dynamic> data = json.decode('''
   {
     "start": {
-      "text": "Welcome to the adventure!",
+      "text": "Where were you last night",
       "choices": [
         {
-          "text": "Go left",
-          "nextScene": "left"
+          "text": "I was with my friends",
+          "nextScene": "with_friends"
         },
         {
-          "text": "Go right",
-          "nextScene": "right"
+          "text": "i was out clubbing",
+          "nextScene": "clubbing"
         }
       ]
     },
-    "left": {
-      "text": "You have come across a river. Do you swim or find a bridge?",
+    "with_friends": {
+      "text": "Why are you lying to me?",
       "choices": [
         {
-          "text": "Swim",
-          "nextScene": "swim"
+          "text": "im not lying to you",
+          "nextScene": "not_lying"
         },
         {
-          "text": "Find a bridge",
-          "nextScene": "find_a_bridge"
+          "text": "Ask Ayabonga.",
+          "nextScene": "ask_aya"
         }
       ]
     },
-    "right": {
-      "text": "You have come across a monster. Do you fight or run?",
+    "clubbing": {
+      "text": "Who was that girl you kissed?",
       "choices": [
         {
-          "text": "Fight",
-          "nextScene": "fight"
+          "text": "Who told you that",
+          "nextScene": "who_told_you"
         },
         {
-          "text": "Run",
-          "nextScene": "run"
+          "text": "i didn't kiss any girl",
+          "nextScene": "i_didnt"
         }
       ]
     },
-    "swim": {
-      "text": "You have reached the other side safely."
+    "not_lying": {
+      "text": "Austin said he was not with you",
+      "choices": [
+        {
+          "text": "Haaa this sanababhish Austin..i swear i was with him and Ayabonga 😲",
+          "nextScene": "i_swear"
+        },
+        {
+          "text": "Oksalaya im telling the truth",
+          "nextScene": "oksalayo"
+        }
+      ]
+    },
+    "who_told_you": {
+      "text": "To be continued!"
+    },
+    "i_didnt": {
+      "text": "To be continued!"
+    },
+     "i_swear": {
+      "text": "To be continued."
+    },
+    "oksalayo": {
+      "text": "To be continued."
     },
     "find_a_bridge": {
       "text": "You have found a safe bridge and crossed the river."
@@ -78,20 +100,22 @@ class _AdventureScreenState extends State<AdventureScreen> {
     return SafeArea(
       child: Scaffold(
         body: choices == null
-            ? Text(scene["text"])
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(scene["text"]),
-                  ...choices.map((choice) => TextButton(
-                        child: Text(choice["text"]),
-                        onPressed: () {
-                          setState(() {
-                            currentScene = choice["nextScene"];
-                          });
-                        },
-                      )),
-                ],
+            ? Center(child: Text(scene["text"]))
+            : Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(scene["text"]),
+                    ...choices.map((choice) => TextButton(
+                          child: Text(choice["text"]),
+                          onPressed: () {
+                            setState(() {
+                              currentScene = choice["nextScene"];
+                            });
+                          },
+                        )),
+                  ],
+                ),
               ),
       ),
     );

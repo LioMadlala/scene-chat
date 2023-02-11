@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scene_chat/from-chat-gpt.dart';
 
 import 'modules/main_page.dart';
 
@@ -18,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: MainPage(),
-      home: const AdventureScreen(),
+      home: MainPage(),
+      // home: const AdventureScreen(),
     );
   }
 }
