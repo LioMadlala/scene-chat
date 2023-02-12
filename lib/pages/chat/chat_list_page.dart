@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../components/chat.dart';
-import '../models/chat_users.dart';
+import '../../components/chat.dart';
+import '../../models/chat_users.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
@@ -14,45 +13,47 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
     ChatUsers(
-        text: "Jane Russel",
-        secondaryText: "Awesome Setup",
-        image: "images/userImage1.jpeg",
-        time: "Now"),
-    ChatUsers(
-        text: "Glady's Murphy",
-        secondaryText: "That's Great",
-        image: "images/userImage2.jpeg",
-        time: "Yesterday"),
-    ChatUsers(
-        text: "Jorge Henry",
+        text: "Zama Msibi",
+        jsonName: "zama",
         secondaryText: "Hey where are you?",
-        image: "images/userImage3.jpeg",
+        image: "assets/images/userImage3.jpeg",
         time: "31 Mar"),
     ChatUsers(
-        text: "Philip Fox",
-        secondaryText: "Busy! Call me in 20 mins",
-        image: "images/userImage4.jpeg",
-        time: "28 Mar"),
-    ChatUsers(
-        text: "Debra Hawkins",
-        secondaryText: "Thankyou, It's awesome",
-        image: "images/userImage5.jpeg",
-        time: "23 Mar"),
-    ChatUsers(
-        text: "Jacob Pena",
-        secondaryText: "will update you in evening",
-        image: "images/userImage6.jpeg",
-        time: "17 Mar"),
-    ChatUsers(
-        text: "Andrey Jones",
-        secondaryText: "Can you please share the file?",
-        image: "images/userImage7.jpeg",
-        time: "24 Feb"),
-    ChatUsers(
-        text: "John Wick",
-        secondaryText: "How are you?",
-        image: "images/userImage8.jpeg",
-        time: "18 Feb"),
+        text: "Jane Russel",
+        jsonName: "jane_russel",
+        secondaryText: "Awesome Setup",
+        image: "assets/images/userImage1.jpeg",
+        time: "Now"),
+    // ChatUsers(
+    //     text: "Glady's Murphy",
+    //     secondaryText: "That's Great",
+    //     image: "assets/images/userImage2.jpeg",
+    //     time: "Yesterday"),
+    // ChatUsers(
+    //     text: "Philip Fox",
+    //     secondaryText: "Busy! Call me in 20 mins",
+    //     image: "assets/images/userImage4.jpeg",
+    //     time: "28 Mar"),
+    // ChatUsers(
+    //     text: "Debra Hawkins",
+    //     secondaryText: "Thankyou, It's awesome",
+    //     image: "assets/images/userImage5.jpeg",
+    //     time: "23 Mar"),
+    // ChatUsers(
+    //     text: "Jacob Pena",
+    //     secondaryText: "will update you in evening",
+    //     image: "assets/images/userImage6.jpeg",
+    //     time: "17 Mar"),
+    // ChatUsers(
+    //     text: "Andrey Jones",
+    //     secondaryText: "Can you please share the file?",
+    //     image: "assets/images/userImage7.jpeg",
+    //     time: "24 Feb"),
+    // ChatUsers(
+    //     text: "John Wick",
+    //     secondaryText: "How are you?",
+    //     image: "assets/images/userImage8.jpeg",
+    //     time: "18 Feb"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -69,9 +70,9 @@ class _ChatPageState extends State<ChatPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     const Text(
-                      "Chats",
+                      "Scene chat",
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
                     Container(
                       padding: const EdgeInsets.only(
@@ -132,6 +133,7 @@ class _ChatPageState extends State<ChatPage> {
                 return ChatUsersList(
                   text: chatUsers[index].text,
                   secondaryText: chatUsers[index].secondaryText,
+                  jsonName: chatUsers[index].jsonName,
                   image: chatUsers[index].image,
                   time: chatUsers[index].time,
                   isMessageRead: (index == 0 || index == 3) ? true : false,

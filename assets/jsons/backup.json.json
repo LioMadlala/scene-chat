@@ -1,0 +1,76 @@
+{
+    "start": {
+      "text": "Its 2 o' damn clock in the morning Where you been?",
+      "choices": [
+        {
+          "text": "I was with my friends",
+          "nextScene": "with_friends"
+        },
+        {
+          "text": "i was kidnapped",
+          "nextScene": "kidnapped"
+        }
+      ]
+    },
+    "with_friends": {
+      "text": "You a lie!, I called Aya and Austin and they were both at home",
+      "choices": [
+        {
+          "text": "im not lying to you",
+          "nextScene": "not_lying"
+        },
+        {
+          "text": "Ask Ayabonga.",
+          "nextScene": "ask_aya"
+        }
+      ]
+    },
+    "kidnapped": {
+      "text": "How did that happen?",
+      "choices": [
+        {
+          "text": "I was out with friend and next thing i wake up in a dark room",
+          "nextScene": "dark_room"
+        },
+        {
+          "text": "i didn't kiss any girl",
+          "nextScene": "i_didnt"
+        }
+      ]
+    },
+    "not_lying": {
+      "text": "Austin said he was not with you",
+      "choices": [
+        {
+          "text": "Haaa this sanababhish Austin..i swear i was with him and Ayabonga 😲",
+          "nextScene": "i_swear"
+        },
+        {
+          "text": "Oksalaya im telling the truth",
+          "nextScene": "oksalayo"
+        }
+      ]
+    },
+    
+    "dark_room": {
+      "text": "To be continued!"
+    },
+    "i_didnt": {
+      "text": "To be continued!"
+    },
+     "i_swear": {
+      "text": "To be continued."
+    },
+    "oksalayo": {
+      "text": "To be continued."
+    },
+    "ask_aya": {
+      "text": "to be continued"
+    },
+    "fight": {
+      "text": "You have defeated the monster and gained a valuable treasure."
+    },
+    "run": {
+      "text": "You have successfully escaped the monster."
+    }
+  }

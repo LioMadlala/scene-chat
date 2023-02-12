@@ -1,7 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ChatDetailPageAppBar extends StatelessWidget implements PreferredSizeWidget{
+class ChatDetailPageAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  final String userName;
+  final String userImage;
+
+  const ChatDetailPageAppBar(
+      {super.key, required this.userName, required this.userImage});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -10,33 +16,51 @@ class ChatDetailPageAppBar extends StatelessWidget implements PreferredSizeWidge
       backgroundColor: Colors.white,
       flexibleSpace: SafeArea(
         child: Container(
-          padding: EdgeInsets.only(right: 16),
+          padding: const EdgeInsets.only(right: 16),
           child: Row(
             children: <Widget>[
               IconButton(
-                onPressed: (){
+                onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(Icons.arrow_back,color: Colors.black,),
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
               ),
-              SizedBox(width: 2,),
+              const SizedBox(
+                width: 2,
+              ),
               CircleAvatar(
-                backgroundImage: AssetImage("images/userImage1.jpeg"),
+                backgroundImage: AssetImage(userImage),
                 maxRadius: 20,
               ),
-              SizedBox(width: 12,),
+              const SizedBox(
+                width: 12,
+              ),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Jane Russel",style: TextStyle(fontWeight: FontWeight.w600),),
-                    SizedBox(height: 6,),
-                    Text("Online",style: TextStyle(color: Colors.green,fontSize: 12),),
+                    Text(
+                      userName,
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(
+                      height: 6,
+                    ),
+                    const Text(
+                      "Online",
+                      style: TextStyle(color: Colors.green, fontSize: 12),
+                    ),
                   ],
                 ),
               ),
-              Icon(Icons.more_vert,color: Colors.grey.shade700,),
+              Icon(
+                Icons.more_vert,
+                color: Colors.grey.shade700,
+              ),
             ],
           ),
         ),
@@ -46,5 +70,5 @@ class ChatDetailPageAppBar extends StatelessWidget implements PreferredSizeWidge
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

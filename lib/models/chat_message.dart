@@ -1,4 +1,4 @@
-import '../modules/chat_detail_page.dart';
+import '../pages/chat/chat_detail_page.dart';
 
 class ChatMessage {
   final String message;

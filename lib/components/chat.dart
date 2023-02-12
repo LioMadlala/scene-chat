@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-
-import '../modules/chat_detail_page.dart';
+import 'package:scene_chat/pages/chat/chat_json_processing_page.dart';
 
 class ChatUsersList extends StatefulWidget {
   final String text;
   final String secondaryText;
   final String image;
+  final String jsonName;
   final String time;
   final bool isMessageRead;
 
@@ -14,6 +14,7 @@ class ChatUsersList extends StatefulWidget {
       required this.text,
       required this.secondaryText,
       required this.image,
+      required this.jsonName,
       required this.time,
       required this.isMessageRead});
 
@@ -27,7 +28,11 @@ class _ChatUsersListState extends State<ChatUsersList> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ChatDetailPage();
+          return JsonProcessingHome(
+            jsonName: widget.jsonName,
+            userName: widget.text,
+            userImage: widget.image,
+          );
         }));
       },
       child: Container(
