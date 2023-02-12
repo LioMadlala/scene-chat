@@ -6,10 +6,16 @@ import '../pages/chat/chat_detail_page.dart';
 class ChatBubble extends StatefulWidget {
   ChatMessage chatMessage;
   Color senderColor;
-  ChatBubble({super.key, required this.chatMessage, required this.senderColor});
+  ChatBubble({
+    super.key,
+    required this.chatMessage,
+    required this.senderColor,
+  });
   @override
   _ChatBubbleState createState() => _ChatBubbleState();
 }
+
+bool hasEmotion = true;
 
 class _ChatBubbleState extends State<ChatBubble> {
   @override
@@ -28,7 +34,28 @@ class _ChatBubbleState extends State<ChatBubble> {
                 : widget.senderColor),
           ),
           padding: const EdgeInsets.all(10),
-          child: Text(widget.chatMessage.message),
+          child: widget.chatMessage.emotion != ""
+              ? Wrap(
+                  children: [
+                    Text(widget.chatMessage.message),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 4.0),
+                      child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 6, vertical: 0),
+                          decoration: BoxDecoration(
+                              color: widget.senderColor.withOpacity(0.3),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Text(
+                            widget.chatMessage.emotion,
+                            style: const TextStyle(
+                              fontSize: 10,
+                            ),
+                          )),
+                    ),
+                  ],
+                )
+              : Text(widget.chatMessage.message),
         ),
       ),
     );

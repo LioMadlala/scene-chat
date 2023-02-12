@@ -5,6 +5,7 @@
     },
     "start": {
       "text": "Its 2 o' damn clock in the morning Where you been?",
+      "emotion": "",
       "choices": [
         {
           "text": "I was with my friends",
@@ -18,6 +19,7 @@
     },
     "with_friends": {
       "text": "You a lie!, I called Aya and Austin and they were both at home",
+      "emotion": "annoyed",
       "choices": [
         {
           "text": "im not lying to you",
@@ -46,7 +48,7 @@
       "text": "Austin said he was not with you",
       "choices": [
         {
-          "text": "Haaa this sanababhish Austin..i swear i was with him and Ayabonga 😲",
+          "text": "Haaa! this guy..i swear i was with him and Ayabonga 😲",
           "nextScene": "i_swear"
         },
         {
@@ -70,11 +72,6 @@
     },
     "ask_aya": {
       "text": "to be continued"
-    },
-    "fight": {
-      "text": "You have defeated the monster and gained a valuable treasure."
-    },
-    "run": {
-      "text": "You have successfully escaped the monster."
     }
+    
   }

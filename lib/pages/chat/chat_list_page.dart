@@ -16,44 +16,14 @@ class _ChatPageState extends State<ChatPage> {
         text: "Zama Msibi",
         jsonName: "zama",
         secondaryText: "Hey where are you?",
-        image: "assets/images/userImage3.jpeg",
+        image: "assets/images/userImage5.jpeg",
         time: "31 Mar"),
-    ChatUsers(
-        text: "Jane Russel",
-        jsonName: "jane_russel",
-        secondaryText: "Awesome Setup",
-        image: "assets/images/userImage1.jpeg",
-        time: "Now"),
     // ChatUsers(
-    //     text: "Glady's Murphy",
-    //     secondaryText: "That's Great",
-    //     image: "assets/images/userImage2.jpeg",
-    //     time: "Yesterday"),
-    // ChatUsers(
-    //     text: "Philip Fox",
-    //     secondaryText: "Busy! Call me in 20 mins",
-    //     image: "assets/images/userImage4.jpeg",
-    //     time: "28 Mar"),
-    // ChatUsers(
-    //     text: "Debra Hawkins",
-    //     secondaryText: "Thankyou, It's awesome",
-    //     image: "assets/images/userImage5.jpeg",
-    //     time: "23 Mar"),
-    // ChatUsers(
-    //     text: "Jacob Pena",
-    //     secondaryText: "will update you in evening",
-    //     image: "assets/images/userImage6.jpeg",
-    //     time: "17 Mar"),
-    // ChatUsers(
-    //     text: "Andrey Jones",
-    //     secondaryText: "Can you please share the file?",
-    //     image: "assets/images/userImage7.jpeg",
-    //     time: "24 Feb"),
-    // ChatUsers(
-    //     text: "John Wick",
-    //     secondaryText: "How are you?",
-    //     image: "assets/images/userImage8.jpeg",
-    //     time: "18 Feb"),
+    //     text: "Jane Russel",
+    //     jsonName: "jane_russel",
+    //     secondaryText: "Awesome Setup",
+    //     image: "assets/images/userImage1.jpeg",
+    //     time: "Now"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -65,41 +35,45 @@ class _ChatPageState extends State<ChatPage> {
           children: <Widget>[
             SafeArea(
               child: Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16, top: 10),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 13),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    const Text(
-                      "Scene chat",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    // const Text(
+                    //   "Scene chat",
+                    //   style:
+                    //       TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    // ),
+                    Image.asset(
+                      "assets/logos/scenechat4.png",
+                      height: 23,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(
-                          left: 8, right: 8, top: 2, bottom: 2),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.pink[50],
-                      ),
-                      child: Row(
-                        children: const <Widget>[
-                          Icon(
-                            Icons.add,
-                            color: Colors.pink,
-                            size: 20,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            "New",
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    )
+                    // Container(
+                    //   padding: const EdgeInsets.only(
+                    //       left: 8, right: 8, top: 2, bottom: 2),
+                    //   height: 30,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(30),
+                    //     color: Colors.pink[50],
+                    //   ),
+                    //   child: Row(
+                    //     children: const <Widget>[
+                    //       Icon(
+                    //         Icons.add,
+                    //         color: Colors.pink,
+                    //         size: 20,
+                    //       ),
+                    //       SizedBox(
+                    //         width: 2,
+                    //       ),
+                    //       Text(
+                    //         "New",
+                    //         style: TextStyle(
+                    //             fontSize: 14, fontWeight: FontWeight.bold),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // )
                   ],
                 ),
               ),

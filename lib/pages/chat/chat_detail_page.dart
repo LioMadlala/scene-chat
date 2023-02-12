@@ -53,12 +53,15 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
     Map<String, dynamic> scene = widget.data[currentScene];
     var choices = scene["choices"];
 
-    chatMessage
-        .add(ChatMessage(message: scene["text"], type: MessageType.Receiver));
+    String emotion = widget.data[currentScene]["emotion"] ?? "";
+    chatMessage.add(ChatMessage(
+        message: scene["text"], type: MessageType.Receiver, emotion: emotion));
 
     setState(() {});
 
     String colorTheme = widget.data["chatSettings"]["chatTheme"];
+
+    print(emotion);
 
     Color color =
         Color(int.parse(colorTheme.substring(2), radix: 16)).withAlpha(0xFF);
@@ -105,7 +108,8 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                                   print(currentScene);
                                   chatMessage.add(ChatMessage(
                                       message: choice["text"],
-                                      type: MessageType.Sender));
+                                      type: MessageType.Sender,
+                                      emotion: ""));
 
                                   setState(() {});
                                 },
