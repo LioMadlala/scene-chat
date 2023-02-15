@@ -31,17 +31,25 @@ class _OnboardingPageState extends State<OnboardingPage> {
             controller: _pageController,
             onPageChanged: (index) {
               setState(() {
-                isLastPage = index == 3;
+                isLastPage = index == 4;
               });
             },
             children: const [
               BuildPage(
+                image: "assets/logos/SceneChat_logo.png",
+                title: "",
+                pageColor: Colors.white30,
+                isAnimatedImage: false,
+                description:
+                    "Welcome to Scene Chat. A chat app that puts you into different chat scenarios. ",
+              ),
+              BuildPage(
                 image: "assets/lottie_animations/game-asset.json",
-                title: "Welcome",
+                title: "Choices",
                 pageColor: Colors.white30,
                 isAnimatedImage: true,
                 description:
-                    "Welcome to Scene Chat. Your choices will determine the path you take and the outcome of the story. Let's get started! ",
+                    "Your choices will determine the path you take and the outcome of the story. Let's get started! ",
               ),
               BuildPage(
                 image: "assets/lottie_animations/winning-badge.json",
@@ -206,7 +214,8 @@ class BuildPage extends StatelessWidget {
               : Image.asset(
                   image,
                   fit: BoxFit.cover,
-                  width: double.infinity,
+                  width: 250,
+                  alignment: Alignment.center,
                 ),
           const SizedBox(height: 50),
           Padding(

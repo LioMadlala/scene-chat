@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 
-class ChatDetailPageAppBar extends StatelessWidget
+class ChatDetailPageAppBar extends StatefulWidget
     implements PreferredSizeWidget {
   final String userName;
   final String userImage;
+  final bool isTyping;
 
   const ChatDetailPageAppBar(
-      {super.key, required this.userName, required this.userImage});
+      {super.key,
+      required this.userName,
+      required this.userImage,
+      required this.isTyping});
 
+  @override
+  State<ChatDetailPageAppBar> createState() => _ChatDetailPageAppBarState();
+
+  @override
+  // ToDo: implement preferredSize
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+class _ChatDetailPageAppBarState extends State<ChatDetailPageAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -32,7 +45,7 @@ class ChatDetailPageAppBar extends StatelessWidget
                 width: 2,
               ),
               CircleAvatar(
-                backgroundImage: AssetImage(userImage),
+                backgroundImage: AssetImage(widget.userImage),
                 maxRadius: 20,
               ),
               const SizedBox(
@@ -44,16 +57,21 @@ class ChatDetailPageAppBar extends StatelessWidget
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      userName,
+                      widget.userName,
                       style: const TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
                       height: 6,
                     ),
-                    const Text(
-                      "Online",
-                      style: TextStyle(color: Colors.green, fontSize: 12),
-                    ),
+                    widget.isTyping
+                        ? const Text(
+                            "Typing...",
+                            style: TextStyle(color: Colors.green, fontSize: 12),
+                          )
+                        : const Text(
+                            "Online",
+                            style: TextStyle(color: Colors.green, fontSize: 12),
+                          ),
                   ],
                 ),
               ),
@@ -67,8 +85,4 @@ class ChatDetailPageAppBar extends StatelessWidget
       ),
     );
   }
-
-  @override
-  // TODO: implement preferredSize
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

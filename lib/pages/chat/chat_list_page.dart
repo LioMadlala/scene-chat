@@ -45,8 +45,9 @@ class _ChatPageState extends State<ChatPage> {
                     //       TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     // ),
                     Image.asset(
-                      "assets/logos/scenechat4.png",
-                      height: 23,
+                      "assets/logos/SceneChat_logo.png",
+                      height: 30,
+                      alignment: Alignment.topLeft,
                     ),
                     // Container(
                     //   padding: const EdgeInsets.only(

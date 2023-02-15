@@ -22,12 +22,12 @@
       "emotion": "annoyed",
       "choices": [
         {
-          "text": "im not lying to you",
-          "nextScene": "not_lying"
+          "text": "But I didn't say them though",
+          "nextScene": "i_didnt_say_them"
         },
         {
-          "text": "Ask Ayabonga.",
-          "nextScene": "ask_aya"
+          "text": "Ask Themba.",
+          "nextScene": "ask_themba"
         }
       ]
     },
@@ -44,16 +44,186 @@
         }
       ]
     },
-    "not_lying": {
-      "text": "Austin said he was not with you",
+    "i_didnt_say_them": {
+      "text": "Well they the only friends I know",
       "choices": [
         {
-          "text": "Haaa! this guy..i swear i was with him and Ayabonga 😲",
-          "nextScene": "i_swear"
+          "text": "Wait before you get all upset ill tell you the truth ",
+          "nextScene": "ill_tell_the_truth"
         },
         {
           "text": "Oksalaya im telling the truth",
           "nextScene": "oksalayo"
+        }
+      ]
+    },
+    "ill_tell_the_truth": {
+      "text": "Spit it out...😡",
+      "emotion": "angry",
+      "choices": [
+        {
+          "text": "I was with my guy when he had some bad news ",
+          "nextScene": "with_my_guy"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "with_my_guy": {
+      "text": " and?? 😠🤷🏻‍♂️",
+      "choices": [
+        {
+          "text": "He was cheated on by his baby mamma",
+          "nextScene": "was_cheated_on"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "was_cheated_on": {
+      "text": " But baby what's that got to do with you coming in at 2 o'clock 😭",
+      "choices": [
+        {
+          "text": "he wanted to kill the her so i had to convince him not to.",
+          "nextScene": "convince_him_not_to"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "convince_him_not_to": {
+      "text": " Why didn't your ass just pick up the phone and call me?🤷🏻‍♂️",
+      "choices": [
+        {
+          "text": "i forgot I'm sorry",
+          "nextScene": "i_forgot_sorry"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "i_forgot_sorry": {
+      "text": "Yeah, well I got something for you, tell me his name",
+      "choices": [
+        {
+          "text": "aw bebe.. you know my friend from parklands moss",
+          "nextScene": "you_know_my_friend"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "you_know_my_friend": {
+      "text": "No i dont Mr lier",
+      "choices": [
+        {
+          "text": "im serious it was Themba",
+          "nextScene": "it_was_themba"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "it_was_themba": {
+      "text": "He got kids?",
+      "choices": [
+        {
+          "text": "No he doesn't, his girl just cheated",
+          "nextScene": "no_he_doesnt_have_kids"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "no_he_doesnt_have_kids": {
+      "text": "Wow a minute ago you said his baby momma 🤨",
+      "choices": [
+        {
+          "text": "🙆🏻‍♂️Haaa i didn't say that",
+          "nextScene": "i_didint_say_that"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "i_didint_say_that": {
+      "text": "You know what you can stay where you are. don't come back here",
+      "choices": [
+        {
+          "text": "Where must i sleep?",
+          "nextScene": "where_must_i_sleep"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "where_must_i_sleep": {
+      "text": "Where you were sir. don't bother coming back here",
+      "choices": [
+        {
+          "text": "Im tired tho",
+          "nextScene": "im_tired"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "im_tired": {
+      "text": "Tell that bitch you were with to give you a massage",
+      "choices": [
+        {
+          "text": "Which bitch.?",
+          "nextScene": "which_bitch"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "which_bitch": {
+      "text": "We both know you were with Mbali 😡",
+      "choices": [
+        {
+          "text": "Haybo, where did you get that?",
+          "nextScene": "where_did_you_get_that"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
+        }
+      ]
+    },
+    "where_did_you_get_that": {
+      "text": "She told me..I HATE YOU M 🔜 Wenja 😡😡😡",
+      "choices": [
+        {
+          "text": "Haaaaaa 🙆🏻‍♂️🙆🏻‍♂️😭",
+          "nextScene": "end"
+        },
+        {
+          "text": "needs continuation",
+          "nextScene": "end"
         }
       ]
     },
@@ -64,13 +234,16 @@
     "i_didnt": {
       "text": "To be continued!"
     },
+    "end": {
+      "text": "end of chat. needs extra script"
+    },
      "i_swear": {
       "text": "To be continued."
     },
     "oksalayo": {
       "text": "To be continued."
     },
-    "ask_aya": {
+    "ask_themba": {
       "text": "to be continued"
     }
     
