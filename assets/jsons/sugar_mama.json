@@ -106,7 +106,7 @@
     "choices": [
       {
         "text": "😅 Ok cool",
-        "nextScene": "vw_polo"
+        "nextScene": "cool"
       }
     ]
   },

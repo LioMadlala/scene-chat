@@ -53,10 +53,15 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   late Color color;
 
   getChatHistory() async {
-    await Hive.openBox<List<dynamic>>('chathistory');
-    chatHistory = Hive.box('chathistory');
+    await Hive.openBox("${widget.jsonName}gameState");
+    _box = Hive.box("${widget.jsonName}gameState");
+    currentScene =
+        _box.get("${widget.jsonName}currentScene", defaultValue: 'start');
 
-    List<dynamic> data = chatHistory.get('chathistory') ?? [];
+    await Hive.openBox<List<dynamic>>("${widget.jsonName}history");
+    chatHistory = Hive.box("${widget.jsonName}history");
+
+    List<dynamic> data = chatHistory.get("${widget.jsonName}history") ?? [];
     List<Chat> chats = data.cast<Chat>().toList();
 
     // chats = chatHistory.get('chathistory');
@@ -83,8 +88,6 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   void initState() {
     super.initState();
 
-    _box = Hive.box('gameState');
-    currentScene = _box.get('currentScene', defaultValue: 'start');
     getChatHistory();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
@@ -124,7 +127,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
           allChatsFromHiveDb.add(
               Chat(message: scene["text"], emotion: emotion, type: "receiver"));
           chatHistory.add(allChatsFromHiveDb);
-          chatHistory.put("chathistory", allChatsFromHiveDb);
+          chatHistory.put("${widget.jsonName}history", allChatsFromHiveDb);
         }
       } else {
         //*first time list
@@ -138,7 +141,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         allChatsFromHiveDb.add(
             Chat(message: scene["text"], emotion: emotion, type: "receiver"));
         chatHistory.add(allChatsFromHiveDb);
-        chatHistory.put("chathistory", allChatsFromHiveDb);
+        chatHistory.put("${widget.jsonName}history", allChatsFromHiveDb);
       }
 
       //*add to db
@@ -204,8 +207,10 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                                                   currentScene =
                                                       choice["nextScene"];
                                                   print(currentScene);
-                                                  _box.put('currentScene',
-                                                      currentScene);
+                                                  _box.put(
+                                                    "${widget.jsonName}currentScene",
+                                                    currentScene,
+                                                  );
 
                                                   //*Add new chat from user to chatlist
                                                   chatMessage.add(ChatMessage(
@@ -223,7 +228,8 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                                                   rr.addAll(allChatsFromHiveDb);
 
                                                   chatHistory.put(
-                                                      "chathistory", rr);
+                                                      "${widget.jsonName}history",
+                                                      rr);
 
                                                   if (_scrollController
                                                       .hasClients) {

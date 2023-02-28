@@ -9,12 +9,9 @@ import 'hive_adapters/chat_adapter.dart';
 
 Future<void> main() async {
   await Hive.initFlutter();
-  await Hive.openBox('gameState');
+  // await Hive.openBox('snehgameState');
 
   Hive.registerAdapter(ChatAdapter());
-
-  // await Hive.openBox<List<Chat>>('chathistory');
-
   WidgetsFlutterBinding.ensureInitialized();
   // MobileAds.instance.initialize();
   final prefs = await SharedPreferences.getInstance();
