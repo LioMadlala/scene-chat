@@ -13,17 +13,17 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
     ChatUsers(
-        text: "Zama Msibi",
-        jsonName: "zama",
-        secondaryText: "Hey where are you?",
+        text: "Sneh Cele",
+        jsonName: "sneh",
+        secondaryText: "Hey can we talk",
         image: "assets/images/userImage5.jpeg",
-        time: "31 Mar"),
-    // ChatUsers(
-    //     text: "Jane Russel",
-    //     jsonName: "jane_russel",
-    //     secondaryText: "Awesome Setup",
-    //     image: "assets/images/userImage1.jpeg",
-    //     time: "Now"),
+        time: "Now"),
+    ChatUsers(
+        text: "Sugar Momma from Starbucks",
+        jsonName: "sugar_mama",
+        secondaryText: "Hey Handsome",
+        image: "assets/images/sugar-mummy.jpg",
+        time: "Now"),
   ];
   @override
   Widget build(BuildContext context) {

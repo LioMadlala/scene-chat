@@ -265,7 +265,7 @@ class GenderShape extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 100,
-                color: Theme.of(context).colorScheme.secondary,
+                color: Theme.of(context).primaryColor,
                 child: Center(
                   child: Text(
                     title,
@@ -280,7 +280,9 @@ class GenderShape extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 100,
-                color: isSelected ? Colors.blue : Colors.black12,
+                color: isSelected
+                    ? Theme.of(context).primaryColor
+                    : Colors.black12,
                 child: Center(
                     child: Text(
                   title,

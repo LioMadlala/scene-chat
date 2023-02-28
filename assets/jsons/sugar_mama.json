@@ -1,0 +1,221 @@
+{
+  "chatSettings": {
+    "chatTheme": "0x00DEE2FF"
+  },
+  "start": {
+    "text": "Hey there, handsome. How are you doing?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Hi, I'm good. Thanks for asking. How about you?",
+        "nextScene": "hi"
+      }
+    ]
+  },
+  "hi": {
+    "text": "I'm doing well, thank you. I couldn't help but notice you at the coffee shop the other day. You looked so cute and confident.😊",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Thank you so much. That's very sweet of you to say.",
+        "nextScene": "very_sweet_of_you_to_say"
+      }
+    ]
+  },
+  "very_sweet_of_you_to_say": {
+    "text": "I know this might sound forward, but I was wondering if you'd like to go out with me sometime? I'd love to take you out to dinner.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Hmm, I don't know. I'm not sure I have time for a date right now",
+        "nextScene": "1_i_dont_know"
+      },
+      {
+        "text": "Yeah sure when?",
+        "nextScene": "2_sure"
+      }
+    ]
+  },
+  "1_i_dont_know": {
+    "text": "I understand though, you're a busy guy. But I do have an offer for you. I could use some help with my work, and I'd be willing to pay you for your time.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Oh really? What kind of work is it?",
+        "nextScene": "what_kind_of_work"
+      }
+    ]
+  },
+  "2_sure": {
+    "text": "Mama: Great! How about tomorrow night? I know a great restaurant that I think you'll love.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "What time?",
+        "nextScene": "what_time"
+      }
+    ]
+  },
+  "what_kind_of_work": {
+    "text": "Well, I'm a business owner, and I have a lot of administrative tasks that I need help with. Things like scheduling appointments, answering emails, and managing my calendar. I could pay you well for your help, and it wouldn't take up too much of your time.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Hmm, that does sound interesting. I could use some extra cash.",
+        "nextScene": "that_does_sound_interesting"
+      }
+    ]
+  },
+  "that_does_sound_interesting": {
+    "text": "Great! Why don't we meet up for coffee sometime and discuss the details?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Sure, that sounds good. what time?",
+        "nextScene": "what_time"
+      }
+    ]
+  },
+  "what_time": {
+    "text": "7PM, I can't wait to get to know you better.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Ok cool",
+        "nextScene": "ok_cool"
+      }
+    ]
+  },
+  "ok_cool": {
+    "text": "Do you own a car",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Yes. its a VW Polo",
+        "nextScene": "1_vw_polo"
+      },
+      {
+        "text": "No. i dont own a car at the moment",
+        "nextScene": "2_i_dont_have_a_car"
+      }
+    ]
+  },
+  "1_vw_polo": {
+    "text": "Oh dear. we cant use that one. ill come with my G wagon 😉🚗",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "😅 Ok cool",
+        "nextScene": "vw_polo"
+      }
+    ]
+  },
+  "2_i_dont_have_a_car": {
+    "text": "Ok ill come pick you up with 1 of my cars",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "😅 Ok cool",
+        "nextScene": "cool"
+      }
+    ]
+  },
+  "cool": {
+    "text": "What outfit will you be wearing?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Just normal casual stuff",
+        "nextScene": "casual"
+      }
+    ]
+  },
+  "casual": {
+    "text": "Ok whats your bank account details? ill send you some money. I want you to look like a Handsome business man that you are.😊",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Wow. for Real?.😅 ",
+        "nextScene": "1_for_real"
+      },
+      {
+        "text": "5485877789 : Capitac Bank",
+        "nextScene": "capitac_bank"
+      }
+    ]
+  },
+  "1_for_real": {
+    "text": "Yeah im gonna send you R20K, would that be enough?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Yeeeeeah.. 20K is good 🤭. 5485877789 : Capitac Bank",
+        "nextScene": "20k"
+      }
+      
+    ]
+  },
+  "capitac_bank": {
+    "text": "Ok Handsome. How much do you need?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Any amount in your power. ",
+        "nextScene": "any_amount"
+      },
+      {
+        "text": "R5K will be enough",
+        "nextScene": "5k"
+      },
+      {
+        "text": "R20K is fine ",
+        "nextScene": "20k"
+      }
+    ]
+  },
+  "any_amount": {
+    "text": "Ok Handsome. ive sent R20K😉😊. that should cover everything. i also need you to have energy for the night",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Wow. Thank you. ill sure do have that energy you looking for😉",
+        "nextScene": "amazed"
+      }
+    ]
+  },
+  "5k": {
+    "text": "Ok Handsome. but ive sent R20K😉😊. that should cover everything. i also need you to have energy for the night",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️😲",
+        "nextScene": "amazed"
+      }
+    ]
+  },
+  "20k": {
+    "text": "Ok Handsome. ive sent R20K😉😊. that should cover everything. i also need you to have energy for the night",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️😲",
+        "nextScene": "amazed"
+      }
+    ]
+  },
+  "amazed": {
+    "text": "Ok cool. Let me get back to work now. will chat later King",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Ok Mam😊🤭😋. chat later",
+        "nextScene": "end"
+      }
+    ]
+  },
+
+
+  "end": {
+    "text": "end of chat. for now clear app data to restart the chats"
+  }
+}

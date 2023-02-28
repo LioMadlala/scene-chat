@@ -132,8 +132,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           "Skip",
-                          style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary),
+                          style:
+                              TextStyle(color: Theme.of(context).primaryColor),
                         ),
                       ),
                     ),
@@ -142,16 +142,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         controller: _pageController,
                         count: 4,
                         effect: SlideEffect(
-                          spacing: 8.0,
-                          // radius: 4.0,
-                          dotWidth: 5.0,
-                          dotHeight: 16.0,
-                          paintStyle: PaintingStyle.stroke,
-                          strokeWidth: 1.5,
-                          dotColor: Colors.grey[200]!,
-                          activeDotColor:
-                              Theme.of(context).colorScheme.secondary,
-                        ),
+                            spacing: 8.0,
+                            // radius: 4.0,
+                            dotWidth: 5.0,
+                            dotHeight: 16.0,
+                            paintStyle: PaintingStyle.stroke,
+                            strokeWidth: 1.5,
+                            dotColor: Colors.grey[200]!,
+                            activeDotColor: Colors.black),
                         onDotClicked: (index) {
                           _pageController.animateToPage(
                             index,
@@ -171,8 +169,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           "Next",
-                          style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary),
+                          style:
+                              TextStyle(color: Theme.of(context).primaryColor),
                         ),
                       ),
                     ),

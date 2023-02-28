@@ -1,0 +1,247 @@
+{
+  "chatSettings": {
+    "chatTheme": "0x0000FFB7"
+  },
+  "start": {
+    "text": "Hey, can we talk?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Sure, what's up?",
+        "nextScene": "sure"
+      }
+    ]
+  },
+  "sure": {
+    "text": "I don't think this is working out between us.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "What do you mean? Is there something I did wrong?",
+        "nextScene": "what_do_you_mean"
+      },
+      {
+        "text": "Can we talk about this? I don't want to lose you.",
+        "nextScene": "can_we_talk_about_this"
+      },
+      {
+        "text": "I don't understand why you're doing this. We had so many good times together.",
+        "nextScene": "i_dont_understand"
+      }
+    ]
+  },
+  "what_do_you_mean": {
+    "text": "It's not anything you did, it's just that I don't feel the same way about you as I used to. I think it's time for us to go our separate ways.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "I understand. I'll miss you, but if that's how you feel, I can't change it.",
+        "nextScene": "i_understand"
+      }
+    ]
+  },
+  "i_understand": {
+    "text": "Thank you for understanding. I hope we can still be friends.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "I don't think I can be just friends with you.",
+        "nextScene": "i_dont_think"
+      },
+      {
+        "text": "Maybe we should take a break from each other for a while.",
+        "nextScene": "take_a_break"
+      }
+    ]
+  },
+  "i_dont_think": {
+    "text": "I understand. Take all the time you need.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Infact. dont worry. ok BYE! 👋🏻",
+        "nextScene": "infact"
+      }
+    ]
+  },
+  "infact": {
+    "text": "What does that supposed to mean?",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "i already have a new girl. thanks for breaking this off i was also about to do it.",
+        "nextScene": "i_already_have_a_new_girl"
+      }
+    ]
+  },
+  "i_already_have_a_new_girl": {
+    "text": "Since when",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Now look whos asking 🤷🏻‍♂️",
+        "nextScene": "now_look"
+      },
+      {
+        "text": "Its been 8 months now.",
+        "nextScene": "Its_been_8_months"
+      }
+    ]
+  },
+  "now_look": {
+    "text": "Seriously is that why you've not been giving me some action?🍆🍑",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Yeah. i wasint feeling you anymore",
+        "nextScene": "i_wasint_feeling_you"
+      }
+     
+    ]
+  },
+  "Its_been_8_months": {
+    "text": "🥺💔💔💔",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Sorry bye...🫢",
+        "nextScene": "end"
+      }
+      
+    ]
+  },
+  "i_wasint_feeling_you": {
+    "text": "Wow...",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Sorry bye...🫢",
+        "nextScene": "end"
+      }
+    ]
+  },
+  "take_a_break": {
+    "text": "That's a good idea. Maybe some time apart will be good for both of us.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Ok. bitch bye 👋🏻",
+        "nextScene": "end"
+      }
+    ]
+  },
+  "can_we_talk_about_this": {
+    "text": "I'm sorry, but I've made up my mind. I think it's best for both of us if we move on.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Can't we work it out? I'll do whatever it takes to make you happy.",
+        "nextScene": "can_we_work_this_out"
+      }
+    ]
+  },
+  "can_we_work_this_out": {
+    "text": " I appreciate that, but I don't think we're right for each other. We want different things in life.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "I can change. I'll do whatever it takes to make you happy.",
+        "nextScene": "i_can_change"
+      }
+    ]
+  },
+  "i_can_change": {
+    "text": "I don't want you to change for me. You should be true to yourself.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Can we at least try to work things out before we call it quits?",
+        "nextScene": "lets_try"
+      }
+    ]
+  },
+  "lets_try": {
+    "text": "I don't think that would be fair to either of us. We've tried before, and it didn't work.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "🙆🏻‍♂️😭😭😭😭😭😭 PLEASE!",
+        "nextScene": "please"
+      }
+    ]
+  },
+  "please": {
+    "text": "NO!",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Yooooooo!",
+        "nextScene": "end"
+      }
+    ]
+  },
+  "i_dont_understand": {
+    "text": "I know, but sometimes things just don't work out. I don't want to drag this out any longer than necessary.",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "I just need some time to process this. Can we talk again in a few days?",
+        "nextScene": "need_extra_time"
+      },
+      {
+        "text": "Wow.. After all ive done for you",
+        "nextScene": "after_all"
+      }
+    ]
+  },
+  "need_extra_time": {
+    "text": "You'll talk alone. im gone",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Hebanna 😲",
+        "nextScene": "hebanna"
+      },
+      {
+        "text": "You are you talking like that to?",
+        "nextScene": "talking_like_that_to"
+      }
+    ]
+  },
+  "hebanna": {
+    "text": "🚶🏻‍♀️🚮",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️ idombilivit",
+        "nextScene": "end"
+      }
+      
+    ]
+  },
+  "talking_like_that_to": {
+    "text": "You clearly see im talking to you moss. 💁🏻‍♀️",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "Yooooooo 😲",
+        "nextScene": "end"
+      }
+      
+    ]
+  },
+  "after_all": {
+    "text": "i also gave you pussy tho",
+    "emotion": "",
+    "choices": [
+      {
+        "text": "🙆🏻‍♂️🙆🏻‍♂️🙆🏻‍♂️ idombilivit",
+        "nextScene": "end"
+      }
+      
+    ]
+  },
+  "end": {
+    "text": "end of chat. for now clear app data to restart the chats"
+  }
+}

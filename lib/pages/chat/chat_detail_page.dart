@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:lottie/lottie.dart';
 import 'package:scene_chat/hive_adapters/chat_adapter.dart';
 
 import '../../components/chat_bubble.dart';
@@ -247,8 +248,10 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                                   : SizedBox(
                                       height: 50,
                                       child: Center(
-                                          child: Text(
-                                              "${widget.userName} is typing..."))),
+                                          child: Lottie.asset(
+                                        "assets/lottie_animations/chat-typing.json",
+                                        height: 30,
+                                      ))),
                         ),
                       ),
                     ],

@@ -4,6 +4,7 @@ import 'package:scene_chat/pages/chat/chat_list_page.dart';
 import 'package:scene_chat/pages/onboarding/onboarding_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'components/app_theme.dart';
 import 'hive_adapters/chat_adapter.dart';
 
 Future<void> main() async {
@@ -15,6 +16,7 @@ Future<void> main() async {
   // await Hive.openBox<List<Chat>>('chathistory');
 
   WidgetsFlutterBinding.ensureInitialized();
+  // MobileAds.instance.initialize();
   final prefs = await SharedPreferences.getInstance();
   final String firstName = prefs.getString('firstName') ?? "";
   final String lastName = prefs.getString('lastName') ?? "";
@@ -35,9 +37,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: whiteTheme,
       home: !isfirstTime ? const OnboardingPage() : const ChatPage(),
       // home: const AdventureScreen(),
     );

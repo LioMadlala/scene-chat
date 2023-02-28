@@ -20,6 +20,8 @@ bool hasEmotion = true;
 class _ChatBubbleState extends State<ChatBubble> {
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+
     return Container(
       padding: const EdgeInsets.only(left: 16, right: 16, top: 0, bottom: 10),
       child: Align(
@@ -27,6 +29,7 @@ class _ChatBubbleState extends State<ChatBubble> {
             ? Alignment.topLeft
             : Alignment.topRight),
         child: Container(
+          constraints: BoxConstraints(maxWidth: width - 70),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             color: (widget.chatMessage.type == MessageType.Receiver
@@ -49,13 +52,18 @@ class _ChatBubbleState extends State<ChatBubble> {
                           child: Text(
                             widget.chatMessage.emotion,
                             style: const TextStyle(
-                              fontSize: 10,
+                              fontSize: 9,
                             ),
                           )),
                     ),
                   ],
                 )
-              : Text(widget.chatMessage.message),
+              : Text(
+                  widget.chatMessage.message,
+                  style: const TextStyle(
+                    fontSize: 12,
+                  ),
+                ),
         ),
       ),
     );

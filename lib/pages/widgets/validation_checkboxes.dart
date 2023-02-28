@@ -18,7 +18,7 @@ class ValidationCheckbox extends StatelessWidget {
           height: 18,
           decoration: BoxDecoration(
               color: hasValidValue
-                  ? Theme.of(context).colorScheme.secondary
+                  ? Theme.of(context).primaryColor
                   : Colors.transparent,
               border: hasValidValue
                   ? Border.all(color: Colors.transparent)
