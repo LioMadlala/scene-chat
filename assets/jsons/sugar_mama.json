@@ -2,6 +2,24 @@
   "chatSettings": {
     "chatTheme": "0x00DEE2FF"
   },
+  "chatInfo": {
+    "user": "Sugar Mama from Starbucks",
+    "intel": "You meet her at Starbucks yesterday morning and you exchanged numbers.",
+    "options": [
+      {
+        "option": "Get R20 000 or More from the Sugar Momma",
+        "ext": "get_money"
+      },
+      {
+        "option": "Make her fall inLove with you",
+        "ext": "inlove"
+      },
+      {
+        "option": "Don't get blocked",
+        "ext": "blocked"
+      }
+    ]
+  },
   "start": {
     "text": "Hey there, handsome. How are you doing?",
     "emotion": "",
@@ -216,6 +234,6 @@
 
 
   "end": {
-    "text": "end of chat. for now clear app data to restart the chats"
+    "text": "..."
   }
 }

@@ -1,0 +1,4 @@
+"chatTheme": "0x0000FFB7"
+FF005E  = Folly (Red)
+#82FF9E = light green
+#2B2D42 = space cadet (dark color)

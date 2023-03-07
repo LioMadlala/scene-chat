@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'dart:async';
 
-import 'package:scene_chat/pages/chat/chat_detail_page.dart';
+import 'package:scene_chat/pages/info/info_page.dart';
 
 class JsonProcessingHome extends StatelessWidget {
   final String jsonName;
@@ -34,12 +34,19 @@ class JsonProcessingHome extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           var data = snapshot.data;
-          return ChatDetailPage(
+          return InfoPage(
             data: data!,
             jsonName: jsonName,
             userName: userName,
             userImage: userImage,
+            fromChat: false,
           );
+          // return ChatDetailPage(
+          //   data: data!,
+          //   jsonName: jsonName,
+          //   userName: userName,
+          //   userImage: userImage,
+          // );
         }
         return const Center(child: CircularProgressIndicator());
       },

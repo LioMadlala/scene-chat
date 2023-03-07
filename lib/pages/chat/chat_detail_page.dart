@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:lottie/lottie.dart';
 import 'package:scene_chat/hive_adapters/chat_adapter.dart';
+import 'package:scene_chat/pages/chat/chat_list_page.dart';
+import 'package:scene_chat/pages/widgets/custom_btn.dart';
 
 import '../../components/chat_bubble.dart';
 import '../../components/chat_detail_page_appbar.dart';
@@ -159,6 +161,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         userName: widget.userName,
         userImage: widget.userImage,
         isTyping: isTyping,
+        jsonName: widget.jsonName,
       ),
       body: !isLoading
           ? Stack(
@@ -192,7 +195,37 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                           color: Colors.white,
 
                           child: choices == null
-                              ? Text(scene["text"])
+                              ? Padding(
+                                  padding: const EdgeInsets.only(right: 16),
+                                  child: CustomBtn(
+                                    text: "Restart Chat",
+                                    textColor: Colors.white,
+                                    outlineBtn: false,
+                                    onPressed: () async {
+                                      await _box.clear();
+                                      await chatHistory.clear();
+                                      // currentScene = "start";
+                                      getChatHistory();
+                                      setState(() {});
+                                      // ignore: use_build_context_synchronously
+                                      Navigator.pushReplacement(
+                                        context,
+                                        PageRouteBuilder(
+                                          pageBuilder: (context, animation,
+                                                  secondaryAnimation) =>
+                                              const ChatPage(),
+                                          transitionsBuilder: (context,
+                                              animation,
+                                              secondaryAnimation,
+                                              child) {
+                                            return child;
+                                          },
+                                        ),
+                                      );
+                                    },
+                                    isDisabled: false,
+                                    isLoading: false,
+                                  ))
                               : !isTyping
                                   ? Wrap(
                                       children: <Widget>[

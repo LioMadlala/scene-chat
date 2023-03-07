@@ -1,6 +1,28 @@
 {
   "chatSettings": {
-    "chatTheme": "0x0000FFB7"
+    "chatTheme": "0x00EEABC4"
+  },
+  "chatInfo": {
+    "user": "Sneh (Icu Relationship)",
+    "intel": "This is our Girlfriend but things ain't as nice as they used to be.",
+    "options": [
+      {
+        "option": "Stop her from breaking up with you",
+        "ext": "stop_breakup"
+      },
+      {
+        "option": "Find out why shes want a breakup",
+        "ext": "find_out"
+      },
+      {
+        "option": "Make her fall inLove with you",
+        "ext": "inlove"
+      },
+      {
+        "option": "Don't get blocked",
+        "ext": "blocked"
+      }
+    ]
   },
   "start": {
     "text": "Hey, can we talk?",

@@ -77,7 +77,7 @@ class _ChatUsersListState extends State<ChatUsersList> {
               style: TextStyle(
                   fontSize: 12,
                   color: widget.isMessageRead
-                      ? Colors.pink
+                      ? Theme.of(context).primaryColor
                       : Colors.grey.shade500),
             ),
           ],

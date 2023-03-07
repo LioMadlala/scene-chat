@@ -35,9 +35,12 @@ class ValidationCheckbox extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        Text(
-          name,
-          style: const TextStyle(fontSize: 13),
+        Expanded(
+          child: Text(
+            name,
+            overflow: TextOverflow.clip,
+            style: const TextStyle(fontSize: 13),
+          ),
         ),
       ],
     );

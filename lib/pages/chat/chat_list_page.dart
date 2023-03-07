@@ -13,7 +13,7 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
     ChatUsers(
-        text: "Sneh Cele",
+        text: "Sneh (Icu relationship)",
         jsonName: "sneh",
         secondaryText: "Hey can we talk",
         image: "assets/images/userImage5.jpeg",
@@ -80,22 +80,48 @@ class _ChatPageState extends State<ChatPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "Search...",
-                  hintStyle: TextStyle(color: Colors.grey.shade400),
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.grey.shade400,
-                    size: 20,
+              padding: const EdgeInsets.only(top: 16, left: 10, right: 10),
+              child: SizedBox(
+                height: 80,
+                child: Card(
+                  // color: Colors.blue,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.asset(
+                              "assets/icons/forward.png",
+                              height: 15,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          const SizedBox(width: 2),
+                          const Text(
+                            "Forwarder by Leo",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Center(
+                          child: Text(
+                            "Remember. To win achieve all the tasks listed for each chat.",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              color: Colors.grey[700],
+                              fontSize: 13,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  filled: true,
-                  fillColor: Colors.grey.shade100,
-                  contentPadding: const EdgeInsets.all(8),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(color: Colors.grey.shade100)),
                 ),
               ),
             ),
@@ -111,7 +137,7 @@ class _ChatPageState extends State<ChatPage> {
                   jsonName: chatUsers[index].jsonName,
                   image: chatUsers[index].image,
                   time: chatUsers[index].time,
-                  isMessageRead: (index == 0 || index == 3) ? true : false,
+                  isMessageRead: true,
                 );
               },
             ),

@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:scene_chat/pages/info/info_page.dart';
 
 class ChatDetailPageAppBar extends StatefulWidget
     implements PreferredSizeWidget {
   final String userName;
   final String userImage;
+  final String jsonName;
   final bool isTyping;
 
   const ChatDetailPageAppBar(
       {super.key,
       required this.userName,
       required this.userImage,
+      required this.jsonName,
       required this.isTyping});
 
   @override
@@ -75,9 +78,21 @@ class _ChatDetailPageAppBarState extends State<ChatDetailPageAppBar> {
                   ],
                 ),
               ),
-              Icon(
-                Icons.more_vert,
-                color: Colors.grey.shade700,
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return InfoPage(
+                      jsonName: widget.jsonName,
+                      userName: widget.userName,
+                      userImage: widget.userImage,
+                      fromChat: true,
+                    );
+                  }));
+                },
+                child: Icon(
+                  Icons.info_outline_rounded,
+                  color: Colors.grey.shade700,
+                ),
               ),
             ],
           ),
